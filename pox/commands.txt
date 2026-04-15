@@ -1,0 +1,8 @@
+Terminal 1
+cd ~/pox
+./pox.py host_discovery
+
+Terminal 2
+
+sudo mn -c
+sudo mn --mac --controller=remote,ip=127.0.0.1

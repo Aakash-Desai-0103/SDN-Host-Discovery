@@ -23,17 +23,23 @@ Implement a Host Discovery Service in an SDN network that:
 
 ### Step 1: Start Controller
 
+```bash
 cd ~/pox
 ./pox.py host_discovery
+```
 
 ### Step 2: Start Mininet
 
+```bash
 sudo mn -c
 sudo mn --mac --controller=remote,ip=127.0.0.1
+```
 
 ### Step 3: Test
 
+```bash
 pingall
+```
 
 ---
 
@@ -69,7 +75,31 @@ Firewall implementation:
 * Output: 100% packet loss
 
 ---
+## 📸 Screenshots
 
+### 🔹 Controller Running
+![Controller Running](pox/Screenshots/1_controller_running.png)
+
+### 🔹 Host Discovery
+![Host Discovery](pox/Screenshots/2_host_discovery.png)
+
+### 🔹 ARP Logs
+![ARP Logs](pox/Screenshots/3_arp_logs.png)
+
+### 🔹 Normal Ping (All Hosts Reachable)
+![Normal Ping](pox/Screenshots/4_normal_pinged.png)
+
+### 🔹 Blocked Host Ping
+![Blocked Ping](pox/Screenshots/5_blocked_ping.png)
+
+### 🔹 Firewall Logs
+![Firewall Logs](pox/Screenshots/6_firewall_logs.png)
+
+### 🔹 Iperf Blocked
+![Iperf Blocked](pox/Screenshots/iperf_blocked.png)
+
+### 🔹 Iperf Success
+![Iperf Success](pox/Screenshots/iperf_success.png)
 ## 📸 Sample Output
 
 * Host discovery logs
@@ -82,3 +112,4 @@ Firewall implementation:
 
 The project successfully demonstrates dynamic host discovery and SDN-based traffic control using a centralized controller.
 
+---
